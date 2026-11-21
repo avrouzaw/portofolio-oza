@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-desk-bg: #F9F8F6;
+  --color-kraft-main: #D2C3B5;
+  --color-kraft-dark: #BFA996;
+  --color-cream-note: #FBF6EE;
+  --color-pink-blush: #E8B8C8;
+  --color-pink-soft: #F5DCE4;
+  --color-pink-grid: #F3D1DC;
+  --color-cocoa: #7A5C52;
+  --color-espresso: #4A352E;
+  --color-ink: #2E221E;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-script: "Alex Brush", cursive;
+  --font-hand: "Caveat", cursive;
+
+  --shadow-tactile: 0 10px 25px -4px rgba(74, 53, 46, 0.12), 0 4px 8px -2px rgba(74, 53, 46, 0.06);
+  --shadow-tactile-deep: 0 20px 35px -8px rgba(74, 53, 46, 0.18), 0 8px 16px -4px rgba(74, 53, 46, 0.08);
+  --shadow-sticker: 0 4px 10px rgba(74, 53, 46, 0.16);
+  --shadow-paperclip: 2px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtle dot grid desk texture */
+.bg-desk-pattern {
+  background-color: #F8F6F2;
+  background-image: radial-gradient(rgba(122, 92, 82, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Notebook grid pattern */
+.bg-pink-grid-paper {
+  background-color: #FFFDFC;
+  background-image:
+    linear-gradient(to right, rgba(232, 184, 200, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 184, 200, 0.3) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Ruled paper lined background */
+.bg-lined-paper {
+  background-color: #FCFAF6;
+  background-image: repeating-linear-gradient(transparent, transparent 23px, rgba(122, 92, 82, 0.12) 24px);
+  line-height: 24px;
+}
+
+/* Die-cut white border sticker effect */
+.die-cut-sticker {
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 8px rgba(74, 53, 46, 0.15), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transform-origin: center center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+.die-cut-sticker:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Decorative washi tape strips */
+.washi-tape-pink {
+  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 10px, transparent 10px, transparent 20px), #E8B8C8;
+  opacity: 0.88;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.washi-tape-dots {
+  background-color: #F5DCE4;
+  background-image: radial-gradient(#7A5C52 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+  opacity: 0.9;
+}
+
+/* Polka dot lanyard ribbon */
+.lanyard-strap {
+  background-color: #F5DCE4;
+  background-image: radial-gradient(#7A5C52 2.5px, transparent 2.5px);
+  background-size: 14px 14px;
+  box-shadow: 2px 4px 8px rgba(74, 53, 46, 0.2);
+}
+
+/* Starry calligraphy textured text mimicking the cover */
+.calligraphy-stars {
+  text-shadow: 0 0 1px rgba(74, 53, 46, 0.6), 2px 2px 0px rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+}
+
+/* Open notebook center spine gutter shadow */
+.journal-spine-shadow {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.06) 0%,
+    rgba(0, 0, 0, 0.18) 46%,
+    rgba(0, 0, 0, 0.28) 50%,
+    rgba(0, 0, 0, 0.18) 54%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .die-cut-sticker:hover {
+    transform: none;
+  }
+}

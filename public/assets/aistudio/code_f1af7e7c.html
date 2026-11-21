@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Adreanna Afroza Whiska — Portfolio &amp; Scrapbook Archive 2026</title>
+<!-- Google Fonts Preconnect and Imports -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Caveat:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Forms & Container Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'desk-bg': '#F9F8F6',
+            'kraft-main': '#D2C3B5',
+            'kraft-dark': '#BFA996',
+            'cream-note': '#FBF6EE',
+            'pink-blush': '#E8B8C8',
+            'pink-soft': '#F5DCE4',
+            'pink-grid': '#F3D1DC',
+            'cocoa': '#7A5C52',
+            'espresso': '#4A352E',
+            'ink': '#2E221E',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            script: ['"Alex Brush"', 'cursive'],
+            hand: ['"Caveat"', 'cursive'],
+          },
+          boxShadow: {
+            'tactile': '0 10px 25px -4px rgba(74, 53, 46, 0.12), 0 4px 8px -2px rgba(74, 53, 46, 0.06)',
+            'tactile-deep': '0 20px 35px -8px rgba(74, 53, 46, 0.18), 0 8px 16px -4px rgba(74, 53, 46, 0.08)',
+            'sticker': '0 4px 10px rgba(74, 53, 46, 0.16)',
+            'paperclip': '2px 4px 6px rgba(0, 0, 0, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles: Tactile Scrapbook Details & Paper Aesthetics -->
+<style data-purpose="scrapbook-textures">
+    /* Subtle dot grid desk texture */
+    .bg-desk-pattern {
+      background-color: #F8F6F2;
+      background-image: radial-gradient(rgba(122, 92, 82, 0.08) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    /* Notebook grid pattern */
+    .bg-pink-grid-paper {
+      background-color: #FFFDFC;
+      background-image: 
+        linear-gradient(to right, rgba(232, 184, 200, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(232, 184, 200, 0.3) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* Ruled paper lined background */
+    .bg-lined-paper {
+      background-color: #FCFAF6;
+      background-image: repeating-linear-gradient(transparent, transparent 23px, rgba(122, 92, 82, 0.12) 24px);
+      line-height: 24px;
+    }
+
+    /* Die-cut white border sticker effect */
+    .die-cut-sticker {
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 4px 8px rgba(74, 53, 46, 0.15), 0 1px 3px rgba(0, 0, 0, 0.08);
+      transform-origin: center center;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .die-cut-sticker:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    /* Decorative washi tape strips */
+    .washi-tape-pink {
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.4), rgba(255,255,255,0.4) 10px, transparent 10px, transparent 20px), #E8B8C8;
+      opacity: 0.88;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+    .washi-tape-dots {
+      background-color: #F5DCE4;
+      background-image: radial-gradient(#7A5C52 1.5px, transparent 1.5px);
+      background-size: 8px 8px;
+      opacity: 0.9;
+    }
+
+    /* Polka dot lanyard ribbon */
+    .lanyard-strap {
+      background-color: #F5DCE4;
+      background-image: radial-gradient(#7A5C52 2.5px, transparent 2.5px);
+      background-size: 14px 14px;
+      box-shadow: 2px 4px 8px rgba(74, 53, 46, 0.2);
+    }
+
+    /* Starry calligraphy textured text mimicking the cover */
+    .calligraphy-stars {
+      text-shadow: 0 0 1px rgba(74, 53, 46, 0.6), 2px 2px 0px rgba(255,255,255,0.6);
+      letter-spacing: 0.05em;
+    }
+
+    /* Open notebook center spine gutter shadow */
+    .journal-spine-shadow {
+      background: linear-gradient(90deg, 
+        rgba(0,0,0,0.06) 0%, 
+        rgba(0,0,0,0.18) 46%, 
+        rgba(0,0,0,0.28) 50%, 
+        rgba(0,0,0,0.18) 54%, 
+        rgba(0,0,0,0.06) 100%);
+    }
+  </style>
+</head>
+<body class="bg-desk-pattern text-ink font-sans antialiased selection:bg-pink-soft selection:text-espresso min-h-screen relative overflow-x-hidden">
+<!-- BEGIN: FloatingNavBar -->
+<!-- Top Minimalist Frosted Pill Navigation -->
+<nav class="fixed top-5 left-1/2 -translate-x-1/2 z-50 px-6 py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-pink-blush/40 shadow-tactile flex items-center gap-6 text-xs sm:text-sm font-semibold text-cocoa transition-all duration-300 hover:bg-white/95" data-purpose="floating-nav">
+<a class="hover:text-espresso hover:underline underline-offset-4 decoration-pink-blush decoration-2 transition" href="#about">About (01–02)</a>
+<span class="text-pink-blush select-none">✦</span>
+<a class="hover:text-espresso hover:underline underline-offset-4 decoration-pink-blush decoration-2 transition" href="#journal">Experience (03–06)</a>
+<span class="text-pink-blush select-none">✦</span>
+<a class="hover:text-espresso hover:underline underline-offset-4 decoration-pink-blush decoration-2 transition" href="#projects">Projects</a>
+<span class="text-pink-blush select-none">✦</span>
+<a class="hover:text-espresso hover:underline underline-offset-4 decoration-pink-blush decoration-2 transition" href="#contact">Connect</a>
+</nav>
+<!-- END: FloatingNavBar -->
+<!-- BEGIN: HeroFlatlaySection -->
+<!-- Realistic Office Desk Flatlay (Matches Visuals of Input Reference) -->
+<header class="relative max-w-5xl mx-auto pt-24 pb-14 px-4 sm:px-6" data-purpose="hero-desk-flatlay">
+<!-- Prop: Corner of Top Left Modern Pastel Keyboard -->
+<div aria-hidden="true" class="absolute -top-6 -left-12 hidden md:block w-72 bg-white/90 p-3 rounded-2xl shadow-tactile border border-pink-soft -rotate-12 select-none pointer-events-none opacity-90 z-0">
+<div class="grid grid-cols-6 gap-1.5 p-2 bg-desk-bg rounded-xl border border-pink-soft/60">
+<div class="h-6 rounded bg-pink-soft text-[10px] flex items-center justify-center font-bold text-cocoa">esc</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">Q</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">W</div>
+<div class="h-6 rounded bg-pink-soft text-[10px] flex items-center justify-center font-bold text-cocoa">E</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">R</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">T</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">A</div>
+<div class="h-6 rounded bg-pink-soft text-[10px] flex items-center justify-center font-bold text-cocoa">S</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">D</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">F</div>
+<div class="h-6 rounded bg-white text-[10px] flex items-center justify-center font-semibold text-ink">G</div>
+<div class="h-6 rounded bg-pink-soft text-[10px] flex items-center justify-center font-bold text-cocoa">★</div>
+</div>
+<div class="text-[9px] text-center text-cocoa/70 mt-1 font-mono tracking-widest uppercase">system ready</div>
+</div>
+<!-- Prop: Realistic Latte Cup with Foam Heart & Saucer -->
+<div aria-hidden="true" class="absolute top-44 -left-6 sm:left-2 w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white shadow-tactile-deep border-4 border-stone-200/80 flex items-center justify-center z-20 pointer-events-none">
+<div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-[#9B6F55] via-[#BA8E74] to-[#C99F84] border-2 border-[#7A5C52]/40 shadow-inner flex items-center justify-center relative overflow-hidden">
+<!-- Latte foam swirl -->
+<div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#FFF5EA] to-[#E8D4C0] shadow-sm transform rotate-45 flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-[#BA8E74]/30"></div>
+</div>
+</div>
+</div>
+<!-- Prop: Angled Newspaper Clipping underneath coffee -->
+<div aria-hidden="true" class="absolute top-28 left-8 sm:left-20 w-52 sm:w-64 bg-cream-note p-3 shadow-tactile border border-kraft-dark/30 -rotate-12 z-10 pointer-events-none font-serif select-none">
+<div class="text-xs uppercase tracking-widest border-b border-cocoa/30 pb-0.5 font-bold text-espresso">Business &amp; Economy</div>
+<h4 class="text-sm font-bold text-ink leading-tight mt-1">Digital Transformation &amp; Financial Efficiency</h4>
+<p class="text-[9px] leading-tight text-cocoa font-sans mt-1 line-clamp-3">Evaluating tech-driven enterprise strategies, scalable architectures, and user-centric data operations in modernized fiscal landscapes.</p>
+</div>
+<!-- Prop: Sticky Note & Tortoiseshell Eyeglasses (Right Side) -->
+<div class="absolute top-16 right-4 sm:right-12 z-20 rotate-6 hidden sm:block">
+<!-- Binder Clip on Note -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 rounded-sm bg-gradient-to-r from-stone-400 via-stone-200 to-stone-400 shadow-sm border border-stone-500 z-30"></div>
+<div class="w-48 bg-[#FFF8EB] p-4 shadow-tactile border-l-4 border-pink-blush transform rotate-2">
+<p class="font-hand text-xl text-espresso leading-snug font-bold">
+          "Thanks in advance and hire me to unlock my full potential!"
+        </p>
+<span class="block text-right font-hand text-lg text-cocoa mt-2">~ Adre ✦</span>
+</div>
+</div>
+<!-- Eyeglasses Silhouette / Prop -->
+<div aria-hidden="true" class="absolute top-64 right-2 sm:right-16 z-20 rotate-12 hidden md:flex items-center gap-2 pointer-events-none opacity-90">
+<div class="w-20 h-14 rounded-3xl border-4 border-amber-950 bg-white/10 backdrop-blur-[1px] shadow-tactile relative">
+<div class="absolute inset-1 rounded-2xl border border-amber-800/40"></div>
+</div>
+<div class="w-5 h-1 bg-amber-950 rounded"></div>
+<div class="w-20 h-14 rounded-3xl border-4 border-amber-950 bg-white/10 backdrop-blur-[1px] shadow-tactile relative">
+<div class="absolute inset-1 rounded-2xl border border-amber-800/40"></div>
+</div>
+</div>
+<!-- Center Main Manila Folder Component -->
+<div class="relative max-w-2xl mx-auto mt-6 z-10" data-purpose="hero-kraft-folder">
+<!-- Back Tab Layer 1: "dear mrs. recruiter" -->
+<div class="absolute -top-7 left-12 bg-[#EFE8DD] px-5 py-2 rounded-t-xl font-hand text-lg text-espresso/90 shadow-sm border-t border-x border-kraft-dark/40 tracking-wide rotate-[-1deg]">
+        dear mrs. recruiter
+      </div>
+<!-- Back Tab Layer 2: "CONFIDENTIAL" with Silver Paperclip & Passport Pic -->
+<div class="absolute -top-9 right-16 bg-[#FAF6F0] px-4 py-1.5 rounded-t-xl text-[11px] font-mono tracking-widest text-red-700/80 uppercase font-bold border-t border-x border-kraft-dark/40 rotate-[2deg] flex items-center gap-2">
+<!-- Metal Paperclip -->
+<span class="w-3 h-8 -top-3 absolute left-2 rounded-full border-2 border-stone-400 bg-transparent shadow-paperclip"></span>
+<span>[ CONFIDENTIAL ]</span>
+<span class="text-xs">📎</span>
+</div>
+<!-- Front Manila Kraft Folder -->
+<div class="relative bg-gradient-to-b from-[#D8C7B8] via-[#CFBDAE] to-[#C7B3A2] rounded-2xl p-8 sm:p-14 shadow-tactile-deep border border-[#BBA795] text-center overflow-hidden">
+<!-- Subtle Paper Texture Overlay -->
+<div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#4A352E_1px,transparent_1px)] [background-size:12px_12px]"></div>
+<!-- Little Star Accents Around Title -->
+<div class="absolute top-6 left-8 text-espresso/40 text-xl select-none">✦</div>
+<div class="absolute top-10 right-12 text-espresso/40 text-sm select-none">★</div>
+<div class="absolute bottom-8 left-12 text-espresso/40 text-base select-none">★</div>
+<!-- Manila Folder Heading (Exact Reference Typography) -->
+<div class="relative z-10 py-4">
+<p class="font-hand text-2xl sm:text-3xl text-espresso/80 -rotate-2 mb-1">Scrapbook &amp; Career Journey</p>
+<h1 class="font-serif italic text-4xl sm:text-6xl md:text-7xl font-extrabold text-espresso calligraphy-stars tracking-tight">
+            Adre's Portfolio
+          </h1>
+<p class="font-sans text-xs sm:text-sm tracking-widest uppercase font-bold text-cocoa mt-3">
+            Information Systems • UI/UX Design • Tech &amp; Business Synergy
+          </p>
+</div>
+<!-- Die-cut Oval Year Sticker & Star Badges -->
+<div class="mt-4 flex items-center justify-center gap-3 relative z-10">
+<div class="die-cut-sticker inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-pink-soft via-white to-pink-soft text-espresso rounded-full font-serif font-black text-lg sm:text-xl tracking-wider shadow-sticker">
+<span>2</span>
+<span class="text-pink-blush text-sm">★</span>
+<span>2</span>
+<span>6</span>
+</div>
+<div class="die-cut-sticker w-8 h-8 rounded-full bg-white flex items-center justify-center text-espresso text-base font-bold shadow-sticker rotate-12">
+            ★
+          </div>
+</div>
+</div>
+<!-- Pink Polka-Dot Lanyard Dropping Down Toward ID Card -->
+<div class="absolute -bottom-16 right-10 sm:right-20 w-8 h-24 lanyard-strap rounded-b-md z-20 pointer-events-none"></div>
+</div>
+</header>
+<!-- END: HeroFlatlaySection -->
+<!-- BEGIN: MiddleEditorialSpread -->
+<!-- Section 01 & 02: About Me, Education Note & Employee ID Card Badge -->
+<main class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start my-8" data-purpose="about-and-id-section" id="about">
+<!-- LEFT COLUMN: Bio + Education Ruled Note -->
+<div class="md:col-span-7 space-y-6">
+<!-- (01) About Me Block -->
+<div class="bg-white/95 rounded-2xl p-6 sm:p-7 shadow-tactile border border-pink-soft/80 relative" data-purpose="about-me-card">
+<!-- Washi tape corner decoration -->
+<div class="washi-tape-pink absolute -top-3 left-8 w-24 h-5 -rotate-2 rounded-xs"></div>
+<div class="flex items-center gap-2 mb-3 mt-1">
+<span class="text-xs font-mono font-bold text-pink-blush tracking-wider">(01)</span>
+<h2 class="font-serif italic text-3xl sm:text-4xl font-bold text-espresso flex items-center gap-2">
+              About me! <span class="text-xl not-italic">★</span>
+</h2>
+</div>
+<p class="text-sm sm:text-base leading-relaxed text-ink/90 font-medium">
+            I'm <strong class="text-espresso font-bold">Adreanna Afroza Whiska</strong>, also known as <strong class="text-espresso font-bold">Adre</strong>, an Information Systems undergraduate student at <span class="underline decoration-pink-blush decoration-2">Institut Teknologi PLN (ITPLN)</span> with a strong academic foundation (3.98 GPA in Informatics Engineering at Universitas Sriwijaya). With hands-on experience in UI/UX prototyping, web &amp; Java desktop development, and economic analysis, I'm passionate about bridging technology with business efficiency to create impactful digital solutions.
+          </p>
+</div>
+<!-- (02) Education Ruled Lined Paper Note -->
+<div class="relative bg-cream-note rounded-2xl p-6 sm:p-8 shadow-tactile border border-kraft-dark/40 rotate-[-0.5deg]" data-purpose="education-ruled-note">
+<!-- Realistic Washi Tape at Top Center -->
+<div class="washi-tape-dots absolute -top-3 left-1/3 w-32 h-6 -rotate-1 shadow-sm"></div>
+<!-- Section 02 Heading with University Crest Badge -->
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="text-xs font-mono font-bold text-cocoa tracking-wider">(02)</span>
+<h3 class="font-serif italic text-3xl font-bold text-espresso">Education</h3>
+</div>
+<!-- University Crest Emblem Stamp -->
+<div class="w-14 h-14 rounded-full border-2 border-dashed border-cocoa/50 p-1 flex items-center justify-center text-center rotate-6 bg-white/70 shadow-sm">
+<div class="w-full h-full rounded-full border border-cocoa/60 flex flex-col items-center justify-center p-0.5">
+<span class="text-[8px] font-bold text-cocoa uppercase tracking-tighter">ITPLN</span>
+<span class="text-xs">⚡</span>
+</div>
+</div>
+</div>
+<!-- Lined Paper Notebook Content -->
+<div class="space-y-4 font-sans text-xs sm:text-sm">
+<!-- Education Item 1 -->
+<div class="border-l-2 border-pink-blush pl-3 py-1">
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-espresso text-sm sm:text-base">(1) Information Systems, Institut Teknologi PLN</h4>
+<span class="text-[11px] font-mono text-cocoa font-bold">2026 – Present</span>
+</div>
+<p class="text-ink/80 font-medium">Ikatan Kerja Track • Focus on Enterprise Architecture &amp; Business Systems</p>
+</div>
+<!-- Education Item 2 -->
+<div class="border-l-2 border-pink-blush pl-3 py-1">
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-espresso text-sm sm:text-base">(2) Informatics Engineering, Universitas Sriwijaya</h4>
+<span class="text-[11px] font-mono font-bold text-espresso bg-pink-soft px-2 py-0.5 rounded">GPA: 3.98 / 4.00</span>
+</div>
+<p class="text-ink/80">Completed Core Computer Science &amp; Algorithms Curriculum (2025 – 2026)</p>
+</div>
+<!-- Education Item 3 -->
+<div class="border-l-2 border-kraft-dark pl-3 py-1">
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-espresso text-sm sm:text-base">(3) Natural Sciences (IPA), MAN Insan Cendekia OKI</h4>
+<span class="text-[11px] font-mono text-cocoa font-bold">Avg: 94.78 / 100</span>
+</div>
+<p class="text-ink/80">Active in Science &amp; Economics Olympiads • High Academic Distinction (2022 – 2025)</p>
+</div>
+</div>
+<!-- Handwriting Note Stamp -->
+<div class="mt-4 pt-3 border-t border-dashed border-cocoa/20 flex justify-end">
+<span class="font-hand text-lg text-cocoa font-bold rotate-[-2deg]">
+              "Bridging technology with business efficiency!" ✦
+            </span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Hanging Employee Card ID Badge & Die-Cut Skill Stickers -->
+<div class="md:col-span-5 flex flex-col items-center">
+<!-- Silver Lobster Swivel Clip -->
+<div class="w-6 h-8 border-2 border-stone-400 bg-stone-200 rounded-t-full shadow-md -mb-2 z-20 flex items-center justify-center">
+<div class="w-1.5 h-3 bg-stone-500 rounded-full"></div>
+</div>
+<!-- Tactile Employee ID Card Badge in Frosted Holder -->
+<div class="w-full max-w-sm bg-white rounded-2xl p-5 shadow-tactile-deep border-2 border-pink-blush/60 relative rotate-1 transition-transform duration-300 hover:rotate-0" data-purpose="employee-id-badge">
+<!-- Badge Header -->
+<div class="flex items-center justify-between border-b-2 border-pink-soft pb-2 mb-3">
+<div class="flex items-center gap-1.5">
+<span class="text-pink-blush text-sm">✦</span>
+<h3 class="font-serif font-black tracking-widest text-xs uppercase text-espresso">EMPLOYEE CARD ★</h3>
+</div>
+<span class="text-[10px] font-mono font-bold text-cocoa bg-pink-soft/60 px-2 py-0.5 rounded">ID: 2026-IS-AW</span>
+</div>
+<!-- Card Details with Portrait -->
+<div class="flex gap-4">
+<!-- Left: Text Specs -->
+<div class="flex-1 space-y-1.5 text-[11px]">
+<div>
+<span class="font-mono text-cocoa/80 block text-[9px] uppercase tracking-wider">NAME:</span>
+<span class="font-bold text-espresso text-xs">Adreanna Afroza Whiska</span>
+</div>
+<div>
+<span class="font-mono text-cocoa/80 block text-[9px] uppercase tracking-wider">NICKNAME:</span>
+<span class="font-hand text-base font-bold text-espresso leading-none">Adre</span>
+</div>
+<div>
+<span class="font-mono text-cocoa/80 block text-[9px] uppercase tracking-wider">DEPARTMENT:</span>
+<span class="font-semibold text-ink leading-tight block">Information Systems &amp; UI/UX</span>
+</div>
+<div>
+<span class="font-mono text-cocoa/80 block text-[9px] uppercase tracking-wider">SIGN:</span>
+<span class="font-script text-xl text-espresso leading-none">Adre</span>
+</div>
+<div class="pt-1">
+<span class="font-mono text-[9px] font-bold text-cocoa">VALID UNTIL: 11 / 2030</span>
+</div>
+</div>
+<!-- Right: Formal Badge Portrait & Barcode -->
+<div class="w-24 flex flex-col items-center">
+<div class="w-24 h-28 rounded-lg overflow-hidden border-2 border-pink-soft shadow-inner bg-stone-100 flex items-center justify-center relative">
+<!-- Formal portrait photo avatar (Reference Hijab Aesthetic) -->
+<div class="w-full h-full bg-gradient-to-b from-stone-200 to-pink-soft/40 flex flex-col items-center justify-center p-2 text-center">
+<div class="w-12 h-12 rounded-full bg-espresso text-white flex items-center justify-center font-serif text-lg font-bold shadow-sm">
+                    AW
+                  </div>
+<span class="text-[9px] font-bold text-espresso mt-1 tracking-tight">ADREANNA</span>
+</div>
+</div>
+<!-- Barcode Mockup -->
+<div class="w-full mt-2 flex flex-col items-center">
+<div class="h-5 w-full flex justify-between items-end gap-0.5 px-1 py-0.5 bg-white border border-stone-200">
+<div class="w-1 h-full bg-black"></div>
+<div class="w-0.5 h-full bg-black"></div>
+<div class="w-1 h-full bg-black"></div>
+<div class="w-1.5 h-full bg-black"></div>
+<div class="w-0.5 h-full bg-black"></div>
+<div class="w-1 h-full bg-black"></div>
+<div class="w-0.5 h-full bg-black"></div>
+<div class="w-1.5 h-full bg-black"></div>
+</div>
+<span class="text-[8px] font-mono tracking-widest text-stone-500">8922757449</span>
+</div>
+</div>
+</div>
+<!-- Bottom lanyard punch hole accent -->
+<div class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-full bg-stone-300 border border-stone-400"></div>
+</div>
+<!-- Die-Cut Skill Stickers Cluster on Pink Grid Backing Paper -->
+<div class="w-full max-w-sm mt-6 p-4 rounded-2xl bg-pink-grid-paper border border-pink-blush shadow-tactile relative overflow-hidden" data-purpose="skill-stickers-cluster">
+<div class="text-[10px] font-mono uppercase tracking-widest text-cocoa font-bold mb-3 flex items-center justify-between">
+<span>Specialized Skills</span>
+<span class="text-pink-blush">★ ★ ★</span>
+</div>
+<!-- Stickers Array -->
+<div class="flex flex-wrap gap-2.5 items-center justify-center py-2">
+<div class="die-cut-sticker px-3.5 py-1.5 rounded-full bg-[#E8B8C8] text-espresso font-bold text-xs -rotate-2">
+              UI/UX design
+            </div>
+<div class="die-cut-sticker px-3 py-1.5 rounded-full bg-white text-cocoa font-bold text-xs rotate-3 flex items-center gap-1">
+              system <span class="text-pink-blush text-sm">★</span> analysis
+            </div>
+<div class="die-cut-sticker px-3 py-1 rounded-full bg-[#FAF3EC] text-espresso font-semibold text-xs -rotate-3">
+              Java &amp; C++
+            </div>
+<div class="die-cut-sticker px-3.5 py-1.5 rounded-full bg-white text-espresso font-bold text-xs rotate-2">
+              data modeling
+            </div>
+<div class="die-cut-sticker px-4 py-1.5 rounded-full bg-[#F5DCE4] text-espresso font-black text-xs -rotate-1">
+              web ★ design!
+            </div>
+<div class="die-cut-sticker px-3 py-1 rounded-full bg-white text-cocoa font-semibold text-xs rotate-3">
+              business analysis
+            </div>
+</div>
+<!-- Earphones wire doodled aesthetic -->
+<div class="text-right text-[10px] font-hand text-cocoa/70 mt-1">
+            always listening &amp; designing 🎧
+          </div>
+</div>
+</div>
+</section>
+</main>
+<!-- END: MiddleEditorialSpread -->
+<!-- BEGIN: OpenScrapbookJournal -->
+<!-- Section 03 to 06: Two-Page Open Notebook (Matches Bottom Half of Image 2) -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 my-16" data-purpose="open-scrapbook-notebook" id="journal">
+<div class="text-center mb-6">
+<span class="font-hand text-2xl text-cocoa font-bold">Flip through the pages</span>
+<h2 class="font-serif italic text-3xl sm:text-4xl font-bold text-espresso">The Career Journal &amp; Archive</h2>
+</div>
+<!-- Notebook Spread Container -->
+<div class="relative bg-white rounded-3xl shadow-tactile-deep border border-stone-200 p-2 sm:p-4 overflow-hidden">
+<!-- Binder Clip Decor on Top Edge -->
+<div class="absolute -top-1 left-12 sm:left-24 w-10 h-7 bg-stone-800 rounded-b-md shadow-md z-30 flex items-center justify-center">
+<div class="w-6 h-1 border-t-2 border-stone-400"></div>
+</div>
+<div class="absolute -top-1 right-12 sm:right-24 w-10 h-7 bg-stone-800 rounded-b-md shadow-md z-30 flex items-center justify-center">
+<div class="w-6 h-1 border-t-2 border-stone-400"></div>
+</div>
+<!-- Resting Ballpoint Pen on Left Edge -->
+<div class="absolute bottom-10 left-2 w-3 h-48 bg-gradient-to-r from-stone-800 via-stone-700 to-stone-900 rounded-full shadow-lg hidden lg:block z-30 pointer-events-none rotate-3">
+<div class="w-full h-8 bg-amber-400/80 rounded-t-full"></div>
+<div class="w-1 h-12 bg-stone-300 mx-auto mt-2 rounded"></div>
+</div>
+<!-- The Two Pages Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 relative bg-[#FDFDFD] rounded-2xl">
+<!-- Central Spine Gutter Shadow (Creates Realistic Book Fold) -->
+<div class="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-10 journal-spine-shadow z-20 pointer-events-none"></div>
+<!-- ================= LEFT PAGE ================= -->
+<div class="p-6 sm:p-10 border-b md:border-b-0 md:border-r border-stone-200/80 relative" data-purpose="journal-left-page">
+<!-- (03) Organizational Experiences -->
+<div class="mb-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="text-xs font-mono font-bold text-pink-blush tracking-wider">(03)</span>
+<h3 class="font-serif italic text-2xl sm:text-3xl font-extrabold text-espresso">
+                organizational <span class="font-hand font-normal text-xl text-cocoa block sm:inline">experiences</span>
+</h3>
+</div>
+<div class="space-y-6 text-xs sm:text-sm pl-2 border-l border-dashed border-cocoa/30">
+<!-- Role 1 -->
+<div class="relative pl-3">
+<span class="absolute -left-[17px] top-1.5 w-2.5 h-2.5 rounded-full bg-pink-blush border-2 border-white"></span>
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-bold text-espresso text-sm sm:text-base">Head of Female Dormitory Council</h4>
+<span class="text-[11px] font-mono font-semibold text-cocoa">2023 – 2024</span>
+</div>
+<p class="text-cocoa font-medium text-xs mb-1">MAN Insan Cendekia OKI</p>
+<p class="text-ink/80 text-xs leading-relaxed">
+                  Led daily dormitory operations, task delegation, discipline oversight, and student-supervisor mediation for 200+ students. Fostered collaborative residential living and conflict resolution.
+                </p>
+</div>
+<!-- Role 2 -->
+<div class="relative pl-3">
+<span class="absolute -left-[17px] top-1.5 w-2.5 h-2.5 rounded-full bg-kraft-dark border-2 border-white"></span>
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-bold text-espresso text-sm sm:text-base">Member of Religious Affairs Division (OSIS)</h4>
+<span class="text-[11px] font-mono font-semibold text-cocoa">2022 – 2023</span>
+</div>
+<p class="text-cocoa font-medium text-xs mb-1">MAN Insan Cendekia OKI</p>
+<p class="text-ink/80 text-xs leading-relaxed">
+                  Planned and executed major school-wide religious programs, managed logistical schedules, and coordinated cross-division youth development events.
+                </p>
+</div>
+</div>
+</div>
+<!-- (04) Featured Projects Summary (On Notebook) -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-xs font-mono font-bold text-pink-blush tracking-wider">(04)</span>
+<h3 class="font-serif italic text-2xl sm:text-3xl font-extrabold text-espresso">
+                featured projects <span class="font-hand font-normal text-xl text-cocoa block sm:inline">highlights</span>
+</h3>
+</div>
+<div class="space-y-3.5 text-xs sm:text-sm">
+<div class="p-3 bg-pink-soft/30 rounded-xl border border-pink-blush/40 flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-pink-blush flex items-center justify-center font-bold text-espresso shrink-0 text-xs">
+                  01
+                </div>
+<div>
+<h4 class="font-bold text-espresso">Personal Web &amp; Digital Literacy Showcase</h4>
+<p class="text-cocoa text-xs">Wix Web Design • Creative Writing &amp; Technology Digest</p>
+</div>
+</div>
+<div class="p-3 bg-cream-note rounded-xl border border-kraft-dark/30 flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-kraft-main flex items-center justify-center font-bold text-espresso shrink-0 text-xs">
+                  02
+                </div>
+<div>
+<h4 class="font-bold text-espresso">GoFood Geofencing: Crowd &amp; Estimated-Time</h4>
+<p class="text-cocoa text-xs">UI/UX Figma Prototype • System Analysis &amp; Wait-Time Transparency</p>
+</div>
+</div>
+<div class="p-3 bg-stone-100 rounded-xl border border-stone-200 flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-espresso text-white flex items-center justify-center font-bold shrink-0 text-xs">
+                  03
+                </div>
+<div>
+<h4 class="font-bold text-espresso">Mystical Pet Game</h4>
+<p class="text-cocoa text-xs">Java Swing Desktop Application • OOP &amp; Interactive GUI</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= RIGHT PAGE ================= -->
+<div class="p-6 sm:p-10 relative flex flex-col justify-between" data-purpose="journal-right-page">
+<!-- (05) Certificate & Achievement Grid (Miniature Certificates) -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-xs font-mono font-bold text-pink-blush tracking-wider">(05)</span>
+<h3 class="font-serif italic text-2xl sm:text-3xl font-extrabold text-espresso">
+                certificate <span class="font-hand font-normal text-xl text-cocoa block sm:inline">&amp; achievement</span>
+</h3>
+</div>
+<!-- 2x2 Grid of Framed Certificate Thumbnails -->
+<div class="grid grid-cols-2 gap-3 sm:gap-4 my-3">
+<!-- Cert 1: Business Case -->
+<div class="p-2.5 sm:p-3 rounded-xl bg-white border border-pink-soft shadow-sm hover:shadow-tactile transition duration-200">
+<div class="h-16 sm:h-20 bg-gradient-to-br from-amber-50 to-pink-50 border border-stone-200 rounded flex flex-col items-center justify-center p-1 text-center relative overflow-hidden mb-2">
+<span class="text-base sm:text-xl">🏆</span>
+<span class="text-[9px] font-serif font-bold text-espresso leading-tight mt-0.5">TDC Summitfest</span>
+<div class="w-8 h-0.5 bg-amber-400 mt-1"></div>
+</div>
+<div class="text-[10px] sm:text-xs">
+<p class="font-bold text-espresso leading-tight">Semifinalist</p>
+<p class="text-cocoa text-[9px] leading-tight">Business Case 2026 • ITS</p>
+</div>
+</div>
+<!-- Cert 2: JISF Gold -->
+<div class="p-2.5 sm:p-3 rounded-xl bg-white border border-pink-soft shadow-sm hover:shadow-tactile transition duration-200">
+<div class="h-16 sm:h-20 bg-gradient-to-br from-yellow-50 to-amber-100/60 border border-amber-200 rounded flex flex-col items-center justify-center p-1 text-center relative overflow-hidden mb-2">
+<span class="text-base sm:text-xl">🥇</span>
+<span class="text-[9px] font-serif font-bold text-espresso leading-tight mt-0.5">JISF 2024</span>
+<div class="w-8 h-0.5 bg-amber-500 mt-1"></div>
+</div>
+<div class="text-[10px] sm:text-xs">
+<p class="font-bold text-espresso leading-tight">Gold Medalist</p>
+<p class="text-cocoa text-[9px] leading-tight">Innovation Science • IYSA</p>
+</div>
+</div>
+<!-- Cert 3: OSN-P Economics -->
+<div class="p-2.5 sm:p-3 rounded-xl bg-white border border-pink-soft shadow-sm hover:shadow-tactile transition duration-200">
+<div class="h-16 sm:h-20 bg-gradient-to-br from-stone-50 to-blue-50 border border-stone-200 rounded flex flex-col items-center justify-center p-1 text-center relative overflow-hidden mb-2">
+<span class="text-base sm:text-xl">🏅</span>
+<span class="text-[9px] font-serif font-bold text-espresso leading-tight mt-0.5">OSN-P Sumsel</span>
+<div class="w-8 h-0.5 bg-blue-400 mt-1"></div>
+</div>
+<div class="text-[10px] sm:text-xs">
+<p class="font-bold text-espresso leading-tight">4th Place</p>
+<p class="text-cocoa text-[9px] leading-tight">Economics Olympiad 2024</p>
+</div>
+</div>
+<!-- Cert 4: OSN-K Economics -->
+<div class="p-2.5 sm:p-3 rounded-xl bg-white border border-pink-soft shadow-sm hover:shadow-tactile transition duration-200">
+<div class="h-16 sm:h-20 bg-gradient-to-br from-pink-50 to-red-50 border border-stone-200 rounded flex flex-col items-center justify-center p-1 text-center relative overflow-hidden mb-2">
+<span class="text-base sm:text-xl">🎖️</span>
+<span class="text-[9px] font-serif font-bold text-espresso leading-tight mt-0.5">OSN-K 2024</span>
+<div class="w-8 h-0.5 bg-rose-400 mt-1"></div>
+</div>
+<div class="text-[10px] sm:text-xs">
+<p class="font-bold text-espresso leading-tight">1st Place</p>
+<p class="text-cocoa text-[9px] leading-tight">Economics Olympiad • Puspresnas</p>
+</div>
+</div>
+</div>
+</div>
+<!-- (06) Tools: Sleek Square Tiles -->
+<div class="mt-6 pt-4 border-t border-stone-200">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xs font-mono font-bold text-pink-blush tracking-wider">(06)</span>
+<h3 class="font-serif italic text-xl font-bold text-espresso">tools &amp; software</h3>
+</div>
+<!-- Two Rows of Sleek Espresso Square Tiles -->
+<div class="space-y-2">
+<!-- Row 1 -->
+<div class="flex flex-wrap gap-2">
+<div class="w-10 h-10 rounded-lg bg-espresso text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="Figma">
+                  Fg
+                </div>
+<div class="w-10 h-10 rounded-lg bg-espresso text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="Wix Studio">
+                  Wx
+                </div>
+<div class="w-10 h-10 rounded-lg bg-espresso text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="NetBeans IDE">
+                  Nb
+                </div>
+<div class="w-10 h-10 rounded-lg bg-espresso text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="VS Code">
+                  VS
+                </div>
+<span class="text-[11px] font-mono text-cocoa self-center ml-2 hidden sm:inline">Design &amp; IDEs</span>
+</div>
+<!-- Row 2 -->
+<div class="flex flex-wrap gap-2">
+<div class="w-10 h-10 rounded-lg bg-cocoa text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="Microsoft Excel">
+                  X
+                </div>
+<div class="w-10 h-10 rounded-lg bg-cocoa text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="Microsoft Word">
+                  W
+                </div>
+<div class="w-10 h-10 rounded-lg bg-cocoa text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="Microsoft PowerPoint">
+                  P
+                </div>
+<div class="w-10 h-10 rounded-lg bg-cocoa text-white flex items-center justify-center text-xs font-bold shadow hover:scale-105 transition" title="Java &amp; C++">
+                  Jv
+                </div>
+<span class="text-[11px] font-mono text-cocoa self-center ml-2 hidden sm:inline">Analytics &amp; Office</span>
+</div>
+</div>
+<!-- Page Watermark (Matches Reference Bottom Right) -->
+<div class="text-right mt-6">
+<span class="font-hand text-lg text-cocoa/80 italic font-bold">
+                adre's archive 2026 ✦
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: OpenScrapbookJournal -->
+<!-- BEGIN: DetailedProjectsShowcase -->
+<!-- Interactive Scrapbook Polaroid Cards for Selected Projects -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 my-16" data-purpose="detailed-projects" id="projects">
+<div class="text-center mb-10">
+<p class="font-hand text-2xl text-cocoa font-bold">Take a closer look</p>
+<h2 class="font-serif italic text-3xl sm:text-5xl font-extrabold text-espresso">Selected Projects</h2>
+<p class="text-xs sm:text-sm font-mono tracking-widest text-cocoa uppercase mt-2">
+        click to explore live prototypes &amp; repositories ✦
+      </p>
+</div>
+<div class="space-y-10">
+<!-- Project 1: Personal Web & Digital Literacy Showcase -->
+<article class="bg-[#F8EFF2] rounded-3xl p-6 sm:p-8 shadow-tactile border border-pink-blush/60 relative overflow-hidden transition-all duration-300 hover:shadow-tactile-deep" data-purpose="project-card">
+<!-- Top Washi Tape Clip -->
+<div class="washi-tape-pink absolute -top-2 left-10 w-28 h-6 rotate-2"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-7 space-y-3">
+<span class="inline-block px-3 py-1 rounded-full bg-white text-[10px] font-mono font-bold tracking-wider text-cocoa uppercase shadow-sm">
+              WEB DESIGNER &amp; CREATOR • ACADEMIC PROJECT
+            </span>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso">
+              Personal Web &amp; Digital Literacy Showcase (2026)
+            </h3>
+<p class="text-xs sm:text-sm text-ink/80 leading-relaxed">
+              An interactive personal web space designed and built using Wix Studio to consolidate academic milestones, creative writing, and digital literacy analyses into a polished modern portfolio.
+            </p>
+<ul class="text-xs text-cocoa space-y-1 font-medium list-disc list-inside">
+<li>Responsive visual layout aligned with contemporary digital storytelling.</li>
+<li>Embedded infographics, article summaries, and interactive reader forms.</li>
+<li>Optimized navigation architecture for recruiters and peer reviewers.</li>
+</ul>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-espresso text-white text-xs font-bold tracking-wider hover:bg-cocoa shadow-tactile transition" href="https://adreannaaw19.wixsite.com/wheelsontheb" rel="noopener noreferrer" target="_blank">
+<span>View Live Site ↗</span>
+</a>
+</div>
+</div>
+<!-- Polaroid-Framed Mockup Presentation -->
+<div class="md:col-span-5 flex justify-center">
+<div class="w-full max-w-xs bg-white p-3 pb-6 rounded-xl shadow-tactile border border-stone-200 rotate-2 hover:rotate-0 transition duration-300">
+<div class="w-full h-44 bg-gradient-to-tr from-pink-soft via-pink-100 to-white rounded-lg flex flex-col items-center justify-center p-4 text-center border border-pink-soft">
+<span class="text-3xl mb-1">🌐</span>
+<span class="font-serif font-bold text-espresso text-sm">Wheels on the Blog</span>
+<span class="text-[10px] text-cocoa font-mono mt-1">adreannaaw19.wixsite.com</span>
+</div>
+<div class="mt-3 text-center">
+<span class="font-hand text-lg text-cocoa font-bold">Wix Digital Showcase '26</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: GoFood Geofencing Crowd Tracker -->
+<article class="bg-[#F3ECE3] rounded-3xl p-6 sm:p-8 shadow-tactile border border-kraft-dark/50 relative overflow-hidden transition-all duration-300 hover:shadow-tactile-deep" data-purpose="project-card">
+<!-- Top Washi Tape Clip -->
+<div class="washi-tape-dots absolute -top-2 right-12 w-28 h-6 -rotate-2"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-7 space-y-3">
+<span class="inline-block px-3 py-1 rounded-full bg-white text-[10px] font-mono font-bold tracking-wider text-cocoa uppercase shadow-sm">
+              UI/UX DESIGNER &amp; SYSTEM ANALYST • TEAM PROJECT
+            </span>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso">
+              GoFood Geofencing: Crowd &amp; Estimated-Time Tracker (2026)
+            </h3>
+<p class="text-xs sm:text-sm text-ink/80 leading-relaxed">
+              Conceptualized and prototyped a feature expansion for GoFood utilizing GPS geofencing radius data to assess merchant queue density and deliver real-time meal preparation transparency.
+            </p>
+<ul class="text-xs text-cocoa space-y-1 font-medium list-disc list-inside">
+<li>Comprehensive user journey mapping for delivery drivers, diners, and merchants.</li>
+<li>Figma high-fidelity prototype with dynamic restaurant crowd-level indicators.</li>
+<li>Addressed consumer anxiety during peak dining hours with predictive ETA buffers.</li>
+</ul>
+<div class="pt-2">
+<span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cocoa text-white text-xs font-bold tracking-wider shadow-tactile cursor-pointer hover:bg-espresso transition">
+<span>Figma UI/UX Case Study ✦</span>
+</span>
+</div>
+</div>
+<!-- Polaroid-Framed Mockup Presentation -->
+<div class="md:col-span-5 flex justify-center">
+<div class="w-full max-w-xs bg-white p-3 pb-6 rounded-xl shadow-tactile border border-stone-200 -rotate-2 hover:rotate-0 transition duration-300">
+<div class="w-full h-44 bg-gradient-to-tr from-amber-50 via-orange-50 to-red-50 rounded-lg flex flex-col items-center justify-center p-4 text-center border border-amber-200">
+<span class="text-3xl mb-1">📍</span>
+<span class="font-serif font-bold text-espresso text-sm">Geofencing System Analysis</span>
+<span class="text-[10px] text-cocoa font-mono mt-1">Figma Prototype • Mobile App</span>
+</div>
+<div class="mt-3 text-center">
+<span class="font-hand text-lg text-cocoa font-bold">Crowd Radar Feature '26</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 3: Mystical Pet Game -->
+<article class="bg-[#3E2B24] text-white rounded-3xl p-6 sm:p-8 shadow-tactile-deep border border-espresso relative overflow-hidden transition-all duration-300" data-purpose="project-card">
+<!-- Top Washi Tape Clip -->
+<div class="washi-tape-pink absolute -top-2 left-1/3 w-32 h-6 rotate-1"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-7 space-y-3">
+<span class="inline-block px-3 py-1 rounded-full bg-white/10 text-pink-blush text-[10px] font-mono font-bold tracking-wider uppercase border border-pink-blush/30">
+              JAVA DEVELOPER • PROGRAMMING PRACTICUM
+            </span>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold text-pink-soft">
+              Mystical Pet Game (2025)
+            </h3>
+<p class="text-xs sm:text-sm text-stone-300 leading-relaxed">
+              A fully functional desktop virtual pet simulator developed in NetBeans using Java Swing. Implemented object-oriented principles, modular event listeners, and animated state management.
+            </p>
+<ul class="text-xs text-pink-soft/80 space-y-1 font-medium list-disc list-inside">
+<li>Pet mood, hunger, energy, and level progression state engine.</li>
+<li>Multi-frame graphical interface with custom sprite renderings and sound effects.</li>
+<li>Object-oriented architecture ensuring clean encapsulation and extensible pet classes.</li>
+</ul>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-pink-soft text-espresso text-xs font-bold tracking-wider hover:bg-white shadow-tactile transition" href="https://github.com/avrouzaw/java-mystical-pet-app" rel="noopener noreferrer" target="_blank">
+<span>View GitHub Repo ↗</span>
+</a>
+</div>
+</div>
+<!-- Polaroid-Framed Mockup Presentation -->
+<div class="md:col-span-5 flex justify-center">
+<div class="w-full max-w-xs bg-white p-3 pb-6 rounded-xl shadow-tactile border border-stone-200 rotate-1 hover:rotate-0 transition duration-300">
+<div class="w-full h-44 bg-gradient-to-tr from-stone-900 to-stone-800 rounded-lg flex flex-col items-center justify-center p-4 text-center border border-stone-700">
+<span class="text-3xl mb-1">🐾</span>
+<span class="font-mono font-bold text-pink-soft text-sm">Java Swing GUI App</span>
+<span class="text-[10px] text-stone-400 font-mono mt-1">avrouzaw / java-mystical-pet-app</span>
+</div>
+<div class="mt-3 text-center">
+<span class="font-hand text-lg text-espresso font-bold">OOP Practicum '25</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: DetailedProjectsShowcase -->
+<!-- BEGIN: ConnectSectionAndFooter -->
+<!-- Contact Scrapbook Memo & Social Pill Badges -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 mt-16 mb-24" data-purpose="contact-section" id="contact">
+<div class="relative bg-white rounded-3xl p-8 sm:p-12 shadow-tactile-deep border border-pink-soft/80 text-center overflow-hidden">
+<!-- Dual Washi Tape on Top Corners -->
+<div class="washi-tape-pink absolute -top-3 left-12 w-28 h-6 -rotate-3"></div>
+<div class="washi-tape-dots absolute -top-3 right-12 w-28 h-6 rotate-3"></div>
+<!-- Header -->
+<span class="font-hand text-2xl text-cocoa font-bold">Let's collaborate or chat!</span>
+<h2 class="font-serif italic text-4xl sm:text-5xl font-extrabold text-espresso mt-1">
+        Let's Connect!
+      </h2>
+<p class="font-hand text-xl text-cocoa mt-2 max-w-md mx-auto">
+        open for internships, UI/UX collabs &amp; tech projects
+      </p>
+<!-- Pill Buttons Array for Direct Contact -->
+<div class="mt-8 flex flex-wrap justify-center items-center gap-3 sm:gap-4 max-w-2xl mx-auto">
+<!-- Email -->
+<a class="die-cut-sticker px-5 py-2.5 rounded-full bg-cream-note text-espresso font-bold text-xs sm:text-sm flex items-center gap-2 hover:bg-white shadow-sticker" href="mailto:adreanna.aw19@gmail.com">
+<span>✉</span>
+<span>adreanna.aw19@gmail.com</span>
+</a>
+<!-- WhatsApp -->
+<a class="die-cut-sticker px-5 py-2.5 rounded-full bg-[#EAF7EE] text-emerald-900 font-bold text-xs sm:text-sm flex items-center gap-2 hover:bg-white shadow-sticker" href="https://wa.me/6281929117393" rel="noopener noreferrer" target="_blank">
+<span>💬</span>
+<span>+62 819-2911-7393</span>
+</a>
+<!-- LinkedIn -->
+<a class="die-cut-sticker px-5 py-2.5 rounded-full bg-[#EBF3FA] text-blue-900 font-bold text-xs sm:text-sm flex items-center gap-2 hover:bg-white shadow-sticker" href="https://linkedin.com/in/adreanna-afroza-whiska-3285ba420" rel="noopener noreferrer" target="_blank">
+<span>💼</span>
+<span>LinkedIn / adreanna-afroza-whiska</span>
+</a>
+<!-- GitHub -->
+<a class="die-cut-sticker px-5 py-2.5 rounded-full bg-stone-100 text-stone-900 font-bold text-xs sm:text-sm flex items-center gap-2 hover:bg-white shadow-sticker" href="https://github.com/avrouzaw" rel="noopener noreferrer" target="_blank">
+<span>🐙</span>
+<span>github.com/avrouzaw</span>
+</a>
+<!-- Instagram -->
+<a class="die-cut-sticker px-5 py-2.5 rounded-full bg-pink-soft text-espresso font-bold text-xs sm:text-sm flex items-center gap-2 hover:bg-white shadow-sticker" href="https://instagram.com/avrouza" rel="noopener noreferrer" target="_blank">
+<span>📸</span>
+<span>@avrouza</span>
+</a>
+</div>
+<!-- Little Stamp Accent -->
+<div class="mt-8 pt-6 border-t border-dashed border-stone-200 flex items-center justify-between text-xs text-cocoa font-mono">
+<span>BASED IN: West Jakarta, Indonesia</span>
+<span>STATUS: Available for 2026/2027 Roles</span>
+</div>
+</div>
+</section>
+<!-- Tactile Footer Bar -->
+<footer class="border-t border-pink-blush/40 bg-white/70 py-6 px-4 text-center text-xs font-mono text-cocoa" data-purpose="page-footer">
+<div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+<p>© 2026 Adreanna Afroza Whiska • All rights reserved.</p>
+<p class="font-hand text-base text-espresso font-bold">adre's archive 2026 ✦ designed with care</p>
+</div>
+</footer>
+<!-- END: ConnectSectionAndFooter -->
+</body></html>
